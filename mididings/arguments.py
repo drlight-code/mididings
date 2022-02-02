@@ -157,7 +157,7 @@ def _make_constraint(c):
     elif isinstance(c, _constraint):
         # constraint object
         return c
-    elif isinstance(c, collections.Callable):
+    elif isinstance(c, collections.abc.Callable):
         # function or other callable object
         return transform(c)
     else:
